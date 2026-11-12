@@ -1,0 +1,9 @@
+# Render blueprint: a free web service that runs the Critter Quest server
+services:
+  - type: web
+    name: critter-quest
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /status
